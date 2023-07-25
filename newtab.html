@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Tab</title>
+  <style>
+    /* Style your new tab page here */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      color: #333;
+    }
+    .task-list {
+      margin-bottom: 20px;
+    }
+    .task-item {
+      margin-bottom: 8px;
+    }
+    .task-item input[type="checkbox"] {
+      margin-right: 8px;
+    }
+    .progress-bar {
+      width: 200px;
+      height: 200px;
+      position: relative;
+    }
+    .progress-bar .circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #eee;
+      position: relative;
+    }
+    .progress-bar .circle:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      clip-path: polygon(50% 0%, 50% 50%, 100% 50%);
+    }
+    .progress-bar .fill {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #4CAF50;
+      transform-origin: 0 50%;
+      animation: fill-progress 1s forwards;
+    }
+    @keyframes fill-progress {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(180deg);
+      }
+    }
+  </style>
+  <script src="newtab.js"></script>
+</head>
+<body>
+  <h1>Welcome to the New Tab Page!</h1>
+
+  <h2>Tasks</h2>
+  <div class="task-list">
+    <div class="task-item">
+      <input type="checkbox" id="task1">
+      <label for="task1">Task 1</label>
+    </div>
+    <div class="task-item">
+      <input type="checkbox" id="task2">
+      <label for="task2">Task 2</label>
+    </div>
+    <!-- Add more task items as needed -->
+  </div>
+
+  <h2>Progress</h2>
+  <div class="progress-bar">
+    <div class="circle">
+      <div class="fill"></div>
+    </div>
+  </div>
+
+  <h2>Timer</h2>
+  <div>
+    <button id="startTimer">Start Timer</button>
+    <button id="stopTimer">Stop Timer</button>
+    <span id="timerDisplay">00:00</span>
+  </div>
+
+  <h2>Reminders</h2>
+  <div>
+    <input type="text" id="reminderInput" placeholder="Add a reminder">
+    <button id="addReminder">Add Reminder</button>
+  </div>
+  <ul id="reminderList"></ul>
+
+  <script src="newtab.js"></script>
+</body>
+</html>

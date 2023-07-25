@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Circular Progress Bar</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="progress-bars">
+        <div class="block">
+            <div class="box">
+                <p class="number">
+                    <span class="num">80</span>
+                    <span class="sub">%</span>
+                </p>
+                <p class="title">HTML</p>
+            </div>
+            <span class="dots"></span>
+            <svg class="svg">
+                <defs>
+                    <linearGradient id="gradientStyle">
+                        <stop offset="0%" stop-color="#565656" />
+                        <stop offset="100%" stop-color="#b7b5b5" />
+                    </linearGradient>
+                </defs>
+                <circle class="circle" cx="90" cy="90" r="80" />
+            </svg>
+        </div>
+        <div class="block">
+            <div class="box">
+                <p class="number">
+                    <span class="num">100</span>
+                    <span class="sub">%</span>
+                </p>
+                <p class="title">CSS</p>
+            </div>
+            <span class="dots"></span>
+            <svg class="svg">
+                <circle class="circle" cx="90" cy="90" r="80" />
+            </svg>
+        </div>
+        <div class="block">
+            <div class="box">
+                <p class="number">
+                    <span class="num">35</span>
+                    <span class="sub">%</span>
+                </p>
+                <p class="title">JS</p>
+            </div>
+            <span class="dots"></span>
+            <svg class="svg">
+                <circle class="circle" cx="90" cy="90" r="80" />
+            </svg>
+    </div>
+    </div>
+  </div>
+  <script src="newtab.js"></script>
+</body>
+</html>
