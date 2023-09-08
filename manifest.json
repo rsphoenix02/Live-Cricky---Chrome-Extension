@@ -1,0 +1,11 @@
+{
+    "name" : "Cricky Live",
+    "version" : "1.0.0",
+    "description": "Get all the cricket updates, live!",
+    "manifest_version" : 3,
+    "author" : "Saquib Ahmed",
+    "action" : {
+        "default_popup":"index.html",
+        "default_title":"Crickly Live"
+    }
+}
